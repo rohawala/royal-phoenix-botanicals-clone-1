@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { scale, Tech_Mahindra, Infomatics, ait} from "../assets/images";
 import {
     car,
     contact,
@@ -111,55 +111,66 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Full Stack Developer",
+        company_name: "Scale AI",
+        icon: scale, // Replace with your actual icon import
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "December 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designed and implemented full-stack solutions to enhance Outlier.ai's automated business analysis platform, leveraging Java 8, React.js, Node.js, and Python.",
+            "Optimized database architecture (PostgreSQL, MongoDB), improving data processing speed by 25%.",
+            "Developed scalable APIs to integrate third-party services and facilitate seamless client onboarding.",
+            "Spearheaded prompt engineering for machine learning models, driving improvements in user-relevant insights.",
+            "Conducted AI model testing and updates, aligning solutions with business needs and boosting platform efficiency.",
+            "Collaborated cross-functionally to deploy features that elevated user engagement and drove a 20% growth in product adoption."
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Full Stack Developer",
+        company_name: "Infomatics Corp",
+        icon: Infomatics, // Replace with your actual icon import
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "January 2022 - November 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Led a team of seven developers on dual projects, implementing a CRM application with Spring MVC, AngularJS, Java 8 (migrated to Java 11), and MySQL, and a MERN stack solution.",
+            "Migrated Jenkins from a local server with Intel i7 to Azure Jenkins for better performance and reliability, automating testing and production deployments.",
+            "Implemented CI/CD pipelines and containerized applications using Docker and Kubernetes, reducing deployment times.",
+            "Organized team meetings, assigned tasks, and managed bi-weekly sprints to ensure efficient progress.",
+            "Utilized DevOps practices with tools such as GIT, npm, Jira, Jenkins, and Azure DevOps."
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        title: "Web Assistant Developer",
+        company_name: "George Mason University",
+        icon: scale, // Replace with your actual icon import
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "June 2021 - September 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Crafted a portfolio website for my professor, including web as well as mobile development.",
+            "Intermediate knowledge and experience with MVC JavaScript frameworks and technology, including Angular, TypeScript, React, Redux."
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Senior Technical Associate",
+        company_name: "Tech Mahindra Limited",
+        icon: Tech_Mahindra, // Replace with your actual icon import
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "October 2019 - October 2020",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Deployed software-defined networking (SDN) solutions leveraging Cisco ACI and VMware NSX, automating network provisioning and management tasks to reduce deployment times and minimize errors.",
+            "Led the deployment of a real-time analytics platform on Azure, leveraging Azure Stream Analytics and Power BI, reducing data processing time by 50%.",
+            "Migrated a traditional data center to an Azure-based infrastructure, improving scalability and reducing operational costs by 30%."
+        ],
+    },
+    {
+        title: "Software Developer",
+        company_name: "AIT Global Inc",
+        icon: ait, // Replace with your actual icon import
+        iconBg: "#d4a5a5",
+        date: "January 2017 - March 2019",
+        points: [
+            "Developed DocuBuilder, a robust application designed to process and transform input files (XML, DOCX, XLS, XLSX, CSV, DOC) into visually valuable information such as tables, pie charts, and variables.",
+            "Implemented a client-specific logging mechanism to streamline debugging, increasing efficiency and reducing debugging time by approximately 60%."
         ],
     },
 ];
@@ -173,12 +184,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/rohawala?tab=repositories',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/hussain-rohawala-ab84a1ba/',
     }
 ];
 
@@ -186,43 +197,15 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
+        name: 'Web Assistant Developer',
+        description: 'Crafted a portfolio website for my professor, including web as well as mobile development. Developed intermediate-level skills with MVC JavaScript frameworks, including Angular, TypeScript, React, and Redux.',
+        link: 'https://mason.gmu.edu/~hrohawal/',
+    },    
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Corona Live Tracker',
+        description: 'Created a COVID-19 Tracker/Stats Application using React, Charts.js, Material UI, and APIs with Async/Await syntax. Enhanced skills in React workflow, including data fetching, hooks, and folder structure.',
+        link: 'https://github.com/rohawala/Live_Corona_Tracker',
     }
 ];
