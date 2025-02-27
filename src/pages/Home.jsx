@@ -4,7 +4,8 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Island, Plane, Sky } from "../models";
+import { Bird, Plane } from "../models";
+import background from "../assets/images/background.mp4";
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -26,41 +27,29 @@ const Home = () => {
   }, [isPlayingMusic]);
 
   const adjustBiplaneForScreenSize = () => {
-    let screenScale, screenPosition;
+    let screenScale = [1.5, 1.5, 1.5];
+    let screenPosition = [-2, 2, 0];
 
-    // If screen width is less than 768px, adjust the scale and position
-    if (window.innerWidth < 768) {
+    if (window.innerWidth >= 768) {
       screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
-    }
-
-    return [screenScale, screenPosition];
-  };
-
-  const adjustIslandForScreenSize = () => {
-    let screenScale, screenPosition;
-
-    if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
-      screenPosition = [0, -6.5, -43.4];
-    } else {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, -6.5, -43.4];
+      screenPosition = [-4, 3.5, -3];
     }
 
     return [screenScale, screenPosition];
   };
 
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
-  const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
   return (
     <section className='w-full h-screen relative'>
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
         {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
+
+      <div className='absolute inset-0 w-full h-full z-[-1]'>
+        <video autoPlay loop muted className='w-full h-full object-cover'>
+          <source src={background} type="video/mp4" />
+        </video>
       </div>
 
       <Canvas
@@ -86,20 +75,11 @@ const Home = () => {
           />
 
           <Bird />
-          <Sky isRotating={isRotating} />
-          <Island
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
-            setCurrentStage={setCurrentStage}
-            position={islandPosition}
-            rotation={[0.1, 4.7077, 0]}
-            scale={islandScale}
-          />
           <Plane
-            isRotating={isRotating}
+            isRotating={true}
             position={biplanePosition}
-            rotation={[0, 20.1, 0]}
-            scale={biplaneScale}
+            rotation={[0, 20, 0]}
+            scale={[biplaneScale[0] * 0.75, biplaneScale[1] * 0.75, biplaneScale[2] * 0.75]}
           />
         </Suspense>
       </Canvas>
